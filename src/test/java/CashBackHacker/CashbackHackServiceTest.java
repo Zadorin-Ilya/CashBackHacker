@@ -1,30 +1,25 @@
 package CashBackHacker;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.Assert.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
 
     @Test
-    void remainfrom900() {
-        CashbackHackService service = new CashbackHackService();
-        int expected = 100;
-        int actual = service.remain(900);
-
-        Assertions.assertEquals(expected,actual);
+    public void testRemain900() {
+    CashbackHackService service = new CashbackHackService();
+    int actual = service.remain(900);
+    int expected = 100;
+    assertEquals(actual,expected);
 
     }
-
     @Test
-    void remainfrom1000() {
+    public void testRemain() {
         CashbackHackService service = new CashbackHackService();
-        int expected = 1000;
         int actual = service.remain(1000);
-
-        Assertions.assertEquals(expected,actual);
+        int expected = 1000;
+        assertEquals(actual,expected);
 
     }
-
 }
