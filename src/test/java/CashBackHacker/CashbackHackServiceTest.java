@@ -11,7 +11,7 @@ public class CashbackHackServiceTest {
     @Test
     public void testRemain900() {
     CashbackHackService service = new CashbackHackService();
-    int actual = service.remain(900);
+    int actual = service.remain(800);
     int expected = 100;
     assertEquals(actual,expected);
 
